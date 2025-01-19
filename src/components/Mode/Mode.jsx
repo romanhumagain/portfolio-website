@@ -28,9 +28,9 @@ const Mode = () => {
 
   return (
     <div 
-      className={`fixed p-[8px] transition-transform duration-500 rounded-full shadow-xl cursor-pointer md:p-[12px] right-6 bottom-[32px] md:right-10 md:bottom-12 
+      className={`fixed p-[9px] transition-transform duration-500 rounded-full shadow-xl cursor-pointer md:p-[12px] right-6 bottom-[32px] md:right-10 md:bottom-12 
                   ${mode === 'dark' ? 'bg-gradient-to-r from-neutral-900 to-neutral-500 text-white ' : 'bg-gradient-to-r from-slate-200 to-gray-500 md:to-gray-600 text-black '} 
-                  hover:scale-110 hover:shadow-xl`} 
+                  hover:scale-105 hover:shadow-xl`} 
       onClick={toggleMode}
 
       initial={{ scale: 0.9, opacity: 0, x: 25 }} 

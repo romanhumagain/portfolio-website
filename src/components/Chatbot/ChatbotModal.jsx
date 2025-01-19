@@ -100,11 +100,11 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
   return (
     <div className="fixed bottom-0 right-1 bg-gray-50 rounded-tl-xl rounded-tr-xl h-[90%] w-full max-w-[96%] md:h-[76%] lg:h-[77%] md:w-[330px] lg:w-[372px] flex flex-col shadow-lg">
       <div className="flex items-center justify-between p-3 rounded-tl-xl rounded-tr-xl bg-gradient-to-r from-red-500 to-purple-500">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <img
             src={my_img}
             alt="Profile"
-            className="object-cover w-[34px] h-[34px] md:w-[42px] md:h-[42px] rounded-full hover:scale-105 hover:shadow-lg duration-700"
+            className="object-cover w-[34px] h-[34px] md:w-[42px] md:h-[42px] rounded-full"
           />
           <div className="flex flex-col">
             <p className="font-semibold text-white text-md">Roman Humagain</p>
@@ -112,8 +112,8 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
           </div>
         </div>
         <div className="flex gap-3">
-          <MdOutlineRefresh className="text-xl text-white cursor-pointer" onClick={handleMessageRefresh} />
-          <FaMinus className="text-xl text-white cursor-pointer" onClick={handleChatBotModalClose} />
+          <MdOutlineRefresh className=" text-[23px] md:text-[22px] text-white cursor-pointer" onClick={handleMessageRefresh} />
+          <FaMinus className="text-[23px] md:text-[22px] text-white cursor-pointer" onClick={handleChatBotModalClose} />
         </div>
       </div>
 
@@ -142,7 +142,7 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
         <input
           type="text"
           placeholder="Type a message..."
-          className="flex-grow px-3 pt-[9px] pb-[9px] text-sm bg-gray-100 dark:bg-neutral-700 rounded-l-lg outline-none text-gray-800 dark:text-gray-100"
+          className="flex-grow px-3 pt-[10px] pb-[10px] text-sm bg-gray-100 dark:bg-neutral-700 rounded-l-lg outline-none text-gray-800 dark:text-gray-100"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={(e) => {
