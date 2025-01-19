@@ -27,9 +27,9 @@ const Mode = () => {
   }, [mode]);
 
   return (
-    <motion.div 
-      className={`fixed p-[9px] transition-transform duration-500 rounded-full shadow-xl cursor-pointer md:p-[12px] right-6 bottom-[32px] md:right-10 md:bottom-12 
-                  ${mode === 'dark' ? 'bg-gradient-to-r from-neutral-900 to-neutral-500 text-white animate-popup' : 'bg-gradient-to-r from-slate-200 to-gray-500 md:to-gray-600 text-black animate-popup'} 
+    <div 
+      className={`fixed p-[8px] transition-transform duration-500 rounded-full shadow-xl cursor-pointer md:p-[12px] right-6 bottom-[32px] md:right-10 md:bottom-12 
+                  ${mode === 'dark' ? 'bg-gradient-to-r from-neutral-900 to-neutral-500 text-white ' : 'bg-gradient-to-r from-slate-200 to-gray-500 md:to-gray-600 text-black '} 
                   hover:scale-110 hover:shadow-xl`} 
       onClick={toggleMode}
 
@@ -46,7 +46,7 @@ const Mode = () => {
         
         <IoSunnyOutline className=" text-[22px]" />
       )}
-    </motion.div>
+    </div>
   );
 };
 

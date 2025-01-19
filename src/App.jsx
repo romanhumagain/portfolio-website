@@ -16,6 +16,8 @@ import { Toaster } from 'react-hot-toast';
 import Contact from './modal/Contact';
 import ContactModalContextProvider from './context/ContactModalContext';
 import { FlipTextDemo } from './components/ui/FlipTextDemo';
+import Chatbot from './components/Chatbot/Chatbot';
+import ChatbotModal from './components/Chatbot/ChatbotModal';
 
 
 function App() {
@@ -28,6 +30,15 @@ function App() {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isLoading, setIsLoading] = useState(true)
+
+  const [isChatBotOpen, setIsChatBotOpen] = useState(false)
+
+  const handleChatBotModalOpen = () => {
+    setIsChatBotOpen(true);
+  }
+  const handleChatBotModalClose = () => {
+    setIsChatBotOpen(false);
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -48,7 +59,7 @@ function App() {
 
   const scrollToSection = (ref) => {
     if (ref.current) {
-      const navbarHeight = isMobile?65:30;
+      const navbarHeight = isMobile ? 65 : 30;
       const top = ref.current.getBoundingClientRect().top + window.scrollY - navbarHeight;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -57,21 +68,27 @@ function App() {
   return (
     isLoading
       ?
-      <FlipTextDemo/>
+      <FlipTextDemo />
       :
       <ContactModalContextProvider>
         <Router>
           <div className="relative min-h-screen bg-gradient-to-r from-slate-100 md:from-slate-200 md:via-slate-300 to-slate-300 md:to-slate-400 dark:from-neutral-900 dark:to-neutral-950" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <div className='absolute z-50'>
+              <Chatbot handleChatBotModalOpen={handleChatBotModalOpen} />
+            </div>
             <div>
               <div className='absolute z-50'>
-              <Mode />
+                <Mode />
+              </div>
+              <div className='absolute z-50'>
+              {isChatBotOpen && <ChatbotModal handleChatBotModalClose={handleChatBotModalClose} />
+              }
+                
+              </div>
+
+
             </div>
 
-            <div className='absolute z-50'>
-              <Contact />
-            </div>
-            </div>
-            
             <Routes>
               <Route path='/' element={
                 <>

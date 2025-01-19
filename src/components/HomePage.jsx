@@ -7,8 +7,13 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import CoolMode from './ui/CoolMode';
-
+import { useContactModal } from '../context/ContactModalContext';
+import { IoChatboxOutline } from "react-icons/io5";
+import ContactModal from '../modal/ContactModal';
+ 
 const HomePage = () => {
+  const { handleOpenModal, isContactModalOpen, setIsContactModalOpen, handleCloseModal } = useContactModal();
+
   return (
     <>
       <div className='flex flex-col items-center justify-center h-full min-h-screen p-8 mb-10 lg:p-0 md:mb-8 lg:mb-0 ' style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -53,13 +58,13 @@ const HomePage = () => {
                     Download Resume <FaDownload />
                   </a>
 
-                  <a
-                    href="mailto:romanhumagain@gmail.com"
-                    className="p-[5px] text-white transition-all duration-500 rounded-full shadow-md bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-500 hover:to-purple-600 hover:scale-105 hover:shadow-md active:scale-95"
+                  <p
+                    className="p-[6px] text-white transition-all duration-500 rounded-full shadow-md bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-500 hover:to-purple-600 hover:scale-105 hover:shadow-md active:scale-95"
                     title="Send an Email"
+                    onClick={handleOpenModal}
                   >
-                    <MdOutlineMailOutline className='text-lg lg:text-2xl' />
-                  </a>
+                    <IoChatboxOutline className='text-lg lg:text-2xl' />
+                  </p>
                 </div>
 
                 <div className='mt-5'>
@@ -87,6 +92,9 @@ const HomePage = () => {
             </div>
           </motion.div>
       </div>
+      {isContactModalOpen && (
+        <ContactModal isOpen={isContactModalOpen} onClose={handleCloseModal} />
+      )}
     </>
   );
 };
