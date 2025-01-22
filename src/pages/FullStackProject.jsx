@@ -9,11 +9,11 @@ const FullStackProject = ({ details, index }) => {
         {index % 2 === 0 ? (
           <>
             <div className="relative flex justify-center px-5 md:order-1">
-              <div className="relative w-full h-[114px] md:h-[145px] lg:h-[155px]">
+              <div className="relative w-full h-[114px] md:h-[138px] lg:h-[145px]">
                 <img
                   src={details.img}
                   alt={details.title}
-                  className="w-full h-full rounded-lg shadow-md"
+                  className="object-cover w-full h-full rounded-lg shadow-md"
                 />
                 <a
                   href={details?.github_link}
@@ -70,11 +70,11 @@ const FullStackProject = ({ details, index }) => {
               </div>
             </div>
             <div className="relative flex justify-center order-1 px-5 md:order-2">
-              <div className="relative w-full h-[114px] md:h-[145px] lg:h-[155px]">
+              <div className="relative w-full h-[114px] md:h-[138px] lg:h-[145px]">
                 <img
                   src={details.img}
                   alt={details.title}
-                  className="w-full h-full rounded-lg shadow-md"
+                  className="object-cover w-full h-full rounded-lg shadow-md"
                 />
                 <a
                   href={details?.github_link}

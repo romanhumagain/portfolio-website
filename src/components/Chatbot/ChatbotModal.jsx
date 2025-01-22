@@ -6,7 +6,8 @@ import { FiSend } from "react-icons/fi";
 
 const ChatbotModal = ({ handleChatBotModalClose }) => {
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hi! How can I assist you today?" },
+    { role: "assistant", content: "Hi there! 👋 How can I assist you today?" },
+
   ]);
   const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef(null);
@@ -48,7 +49,7 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
   }, [messages]);
 
   const handleMessageRefresh = () => {
-    setMessages([{ role: "assistant", content: "Hi! How can I assist you today?" }]);
+    setMessages([{ role: "assistant", content: "Hi there! 👋 How can I assist you today?" }]);
   };
 
   const handleSendMessage = async () => {
@@ -66,7 +67,7 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
       const queryData = {
         convo: [...messages, { role: "user", content: inputValue }],
         agent: true,
-        agent_id: "678d1c1cdc6988672f7ab679_Roman Humagain",
+        agent_id: "678d27868597903b7e9f488d_Roman Humagain",
       };
 
       const response = await fetch("https://api.fagoon.ai/api/v1/upgrade/chat", {

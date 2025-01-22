@@ -5,10 +5,10 @@ import { FaThreads } from 'react-icons/fa6';
 const socialLinks  = {
 linkedin:'https://www.linkedin.com/in/roman-humagain/',
 github:'https://github.com/romanhumagain',
-instagram:'https://www.instagram.com/__roman_69/',
+instagram:'https://www.instagram.com/_romanhumagain/',
 facebook:'https://www.facebook.com/roman.humagain/',
 x:'https://x.com/i/flow/login?redirect_after_login=%2Froman_humagain',
-thread:'https://www.threads.net/@__roman_69',
+thread:'https://www.threads.net/@_romanhumagain',
 };
 
 export const socialLinksDetails = [
@@ -28,7 +28,7 @@ export const socialLinksDetails = [
 
   {
     name:'instagram',
-    link:'https://www.instagram.com/__roman_69/',
+    link:'https://www.instagram.com/_romanhumagain/',
     icon:FaInstagram,
     brand_color:'text-pink-500'
   },
@@ -49,7 +49,7 @@ export const socialLinksDetails = [
 
   {
     name:'threads',
-    link:'https://www.threads.net/@__roman_69',
+    link:'https://www.threads.net/@_romanhumagain',
     icon:FaThreads,
     brand_color:'text-neutral-900 dark:text-gray-100 hidden md:flex'
   },
