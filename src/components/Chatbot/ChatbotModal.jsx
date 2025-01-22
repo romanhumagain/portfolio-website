@@ -6,7 +6,7 @@ import { FiSend } from "react-icons/fi";
 
 const ChatbotModal = ({ handleChatBotModalClose }) => {
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hi there! 👋 How can I assist you today?" },
+    { role: "assistant", content: "Hey there! 👋 How can I assist you today?" },
 
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -49,7 +49,7 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
   }, [messages]);
 
   const handleMessageRefresh = () => {
-    setMessages([{ role: "assistant", content: "Hi there! 👋 How can I assist you today?" }]);
+    setMessages([{ role: "assistant", content: "Hey there! 👋 How can I assist you today?" }]);
   };
 
   const handleSendMessage = async () => {
@@ -99,7 +99,7 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
   };
 
   return (
-    <div className="fixed bottom-0 right-1 bg-gray-50 rounded-tl-xl rounded-tr-xl h-[90%] w-full max-w-[96%] md:h-[76%] lg:h-[77%] md:w-[330px] lg:w-[372px] flex flex-col shadow-lg">
+    <div className="fixed bottom-0 right-1   bg-gray-50 rounded-tl-xl rounded-tr-xl h-[92%] w-full max-w-[96%] md:h-[76%] lg:h-[76%] md:w-[320px] lg:w-[350px] flex flex-col shadow-lg">
       <div className="flex items-center justify-between p-3 rounded-tl-xl rounded-tr-xl bg-gradient-to-r from-red-500 to-purple-500">
         <div className="flex items-center gap-2 md:gap-3">
           <img
@@ -112,9 +112,9 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
             <p className="text-xs text-gray-200">Software Developer</p>
           </div>
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <MdOutlineRefresh className=" text-[23px] md:text-[22px] text-white cursor-pointer" onClick={handleMessageRefresh} />
-          <FaMinus className="text-[23px] md:text-[22px] text-white cursor-pointer" onClick={handleChatBotModalClose} />
+          <FaMinus className="text-[23px] md:text-[22px] text-white cursor-pointer mr-2" onClick={handleChatBotModalClose} />
         </div>
       </div>
 
@@ -129,7 +129,7 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
               />
             )}
             <div
-              className={`p-3 text-sm rounded-lg shadow-md text-gray-800 dark:text-gray-200 ${
+              className={`p-3 text-[14px] rounded-lg shadow-md text-gray-800 dark:text-gray-200 ${
                 msg.role === "user" ? "bg-slate-300 dark:bg-neutral-900" : "bg-gray-100 dark:bg-neutral-800"
               }`}
               dangerouslySetInnerHTML={{ __html: msg.content }}
@@ -139,11 +139,11 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="flex items-center p-3 bg-gradient-to-r from-red-400 to-purple-400">
+      <div className="flex items-center p-2 bg-gradient-to-r from-red-400 to-purple-400">
         <input
           type="text"
           placeholder="Type a message..."
-          className="flex-grow px-3 pt-[10px] pb-[10px] text-sm bg-gray-100 dark:bg-neutral-700 rounded-l-lg outline-none text-gray-800 dark:text-gray-100"
+          className="flex-grow px-4 pt-[10px] pb-[10px] text-sm h-[44px] md:h-[41px] bg-gray-100 dark:bg-neutral-700 rounded-l-lg outline-none text-gray-800 dark:text-gray-100"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={(e) => {
@@ -151,10 +151,10 @@ const ChatbotModal = ({ handleChatBotModalClose }) => {
           }}
         />
         <button
-          className="px-3 pt-[11px] pb-[11px] text-white bg-purple-600 rounded-r-lg hover:bg-purple-700"
+          className="px-3 pt-[10px] pb-[10px] h-[44px] md:h-[41px] text-gray-200 bg-gray-800 dark:text-gray-800 dark:bg-white rounded-r-lg hover:bg-gray-900 dark:hover:bg-gray-200"
           onClick={handleSendMessage}
         >
-          <FiSend />
+          <FiSend className="text-[18px]" />
         </button>
       </div>
     </div>

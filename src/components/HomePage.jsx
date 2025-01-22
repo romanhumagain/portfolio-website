@@ -18,7 +18,7 @@ const HomePage = () => {
     <>
       <div className='flex flex-col items-center justify-center h-full min-h-screen p-8 mb-10 lg:p-0 md:mb-8 lg:mb-0 ' style={{ fontFamily: "Montserrat, sans-serif" }}>
         <motion.div
-          className='w-full max-w-xl p-5 py-9 mt-12 shadow-xl dark:shadow-lg lg:max-w-[640px] lg:p-10 lg:pb-8 lg:pt-[45px] bg-gradient-to-l from-slate-100 to-slate-300 dark:from-neutral-800 dark:to-neutral-900 rounded-3xl'
+          className='w-full max-w-xl p-5 py-9 mt-12 shadow-xl dark:shadow-lg lg:max-w-[630px] lg:p-10 lg:pb-8 lg:pt-[45px] bg-gradient-to-l from-slate-100 to-slate-300 dark:from-neutral-800 dark:to-neutral-900 rounded-3xl'
           initial={{ scale: 0.9, opacity: 0, y: 15 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{
@@ -88,7 +88,7 @@ const HomePage = () => {
           </div>
 
           <div className='mt-10'>
-            <p className="text-[12px] text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500  to-cyan-600 md:text-[14px] lg:text-[16px]  dark:from-pink-500   dark:to-cyan-500 font-extralight">
+            <p className="text-[12px] text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500  to-cyan-600 md:text-[14px] lg:text-[16px]  dark:from-red-500   dark:to-cyan-500 font-extralight">
               &lt;Passion in Every Line of Code/&gt;
             </p>
 
