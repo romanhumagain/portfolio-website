@@ -88,7 +88,7 @@ const HomePage = () => {
           </div>
 
           <div className='mt-10'>
-            <p className="text-[12px] text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500  to-cyan-600 md:text-[14px] lg:text-[16px]  dark:from-red-500   dark:to-cyan-500 font-extralight">
+            <p className="text-[11px] text-center   md:text-[14px] lg:text-[15px] text-neutral-500 font-extralight">
               &lt;Passion in Every Line of Code/&gt;
             </p>
 
