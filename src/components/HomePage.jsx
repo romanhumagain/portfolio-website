@@ -32,11 +32,14 @@ const HomePage = () => {
 
             <div className='flex flex-col items-center col-span-12 lg:col-span-4'>
               <div className='w-[129px] h-[129px]  overflow-hidden transition-transform duration-700 rounded-full sm:w-[191px] sm:h-[191px] lg:w-[200px] lg:h-[200px] hover:scale-105 hover:shadow-lg'>
-                <img
+                <a href= {my_img} target='_blank'>
+                  <img
                   src={my_img}
                   alt="Profile"
                   className='object-cover w-full h-full transition duration-500 ease-in-out'
                 />
+                </a>
+                
               </div>
             </div>
             <div className='flex flex-col items-center justify-center col-span-12 lg:col-span-8'>
