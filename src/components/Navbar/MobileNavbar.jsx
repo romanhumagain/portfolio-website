@@ -45,7 +45,7 @@ const MobileNavbar = ({ homeRef, aboutRef, skillsRef, expertiseRef, projectsRef,
         </div>
 
         <div className="flex flex-col justify-start h-full">
-          {['Home', 'About', 'Skills', 'Expertise', 'Projects', 'Certificates'].map((section, index) => (
+          {['Home', 'About', 'Skills', 'Expertise', 'Projects'].map((section, index) => (
             <button
               key={section}
               onClick={() => {

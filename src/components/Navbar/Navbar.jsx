@@ -41,7 +41,7 @@ const Navbar = ({ homeRef, aboutRef, skillsRef, expertiseRef, projectsRef, certi
     <>
 
       <motion.div
-       className={`fixed z-40 flex justify-center w-full max-w-[665px] px-3 py-[13px] my-5 rounded-full shadow-md bg-gradient-to-r from-slate-100 via-slate-200 to-slate-300 dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-800`}
+       className={`fixed z-40 flex justify-center w-full max-w-[620px] px-3 py-[14px] my-5 rounded-full shadow-md bg-gradient-to-r from-slate-100 via-slate-200 to-slate-300 dark:from-neutral-700 dark:via-neutral-800 dark:to-neutral-800`}
        initial={{ scale: 0.9, opacity: 0, y: -15 }} 
           animate={{ scale: 1, opacity: 1, y: 0 }} 
           transition={{
@@ -50,7 +50,7 @@ const Navbar = ({ homeRef, aboutRef, skillsRef, expertiseRef, projectsRef, certi
           }}
        >
         <ul className='flex items-center gap-10 font-semibold text-[15px] text-slate-800 dark:text-neutral-300 '>
-          {['Home', 'About', 'Skills', 'Expertise', 'Projects', 'Certificates'].map((section, index) => {
+          {['Home', 'About', 'Skills', 'Expertise', 'Projects'].map((section, index) => {
             const sectionRefs = [homeRef, aboutRef, skillsRef, expertiseRef, projectsRef, certificatesRef];
             return (
               <li

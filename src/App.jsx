@@ -120,7 +120,7 @@ function App() {
                   <div ref={skillsRef}><SkillsPage /></div>
                   <div ref={expertiseRef}><ServicePage /></div>
                   <div ref={projectsRef}><ProjectPage /></div>
-                  <div ref={certificatesRef}><CertificatesPage /></div>
+                  {/* <div ref={certificatesRef}><CertificatesPage /></div> */}
                   <Footer />
                 </>
               } />

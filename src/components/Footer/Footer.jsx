@@ -4,7 +4,7 @@ import socialLinks from '../../data/socialLinks'
 
 const Footer = () => {
   return (
-    <footer className="py-6 text-gray-800 dark:text-gray-400">
+    <footer className="py-10 pb-4 text-gray-800 md:pb-10 dark:text-gray-400">
       <div className="container flex flex-col items-center px-4 mx-auto mb-3 space-y-2 md:mt-20">
         
         <div className="flex mb-2 space-x-6">

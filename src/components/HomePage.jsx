@@ -94,7 +94,7 @@ const HomePage = () => {
 
           <div className='mt-10'>
             <p className="text-[11px] text-center   md:text-[14px] lg:text-[15px] text-neutral-500 font-extralight">
-              &lt;Passion in Every Line of Code/&gt;
+              &lt;/&gt;
             </p>
 
 
